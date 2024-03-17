@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let timeout;
+
+        function debouncing(){
+
+            clearTimeout(timeout); // clear the last timeout
+
+            timeout = setTimeout(function(){ //creating a new timeout with a id
+                sum();
+            },100)
+        }
+
+        async function sum(){
+            const a = document.getElementById("first").value;
+            const b = document.getElementById("second").value;
+
+            const res = await axios.get(`${backend_URL}/sum?a=${a}&b=${b}`);  //backend connect and get data from backend
+            
+            const ans = res.data;
+
+            document.getElementById("result").innerHTML = ans;
+
+        } 
+
+    </script>
+</head>
+<input>
+
+
+        <!-- backend will be same -->
+
+        <input type="text" id="first" oninput="debouncing()"></input>
+        <input type="text" id="second" oninput="debouncing()"></input>
+        <div id="result"></div>
+
+    
+</body>
+</html>

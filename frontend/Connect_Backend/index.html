@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        async function add(){
+
+            const a = documenq.getElementById("first").value;
+            const b = document.getElementById("second").value; 
+
+            const res = axios.get(`${backend_url}/sum?a=${a}&b=${b}`);
+            const ans = res.data;
+
+            document.getElementById("result").innerHTML = ans;
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="first"></input>  
+    <input id="second"></input>  
+    <button onclick='add()'></button>
+    <div id="result"></div> 
+    
+
+
+
+</body>
+</html>
