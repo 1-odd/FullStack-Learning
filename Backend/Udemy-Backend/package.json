@@ -1,0 +1,19 @@
+{
+  "name": "udemy-backend",
+  "version": "1.0.0",
+  "description": "### Description Functionally the same as 03-course-app-medium. Routes are the same as well. Rather than storing data in files, store them in MongoDB.  We will be covering this in the extra class next week but would be good for you to run ahead.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
